@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzEventViewer", "AzEventViewer\AzEventViewer.csproj", "{FCEB81D8-8B4A-4B1B-A8D2-9AE7C35FDBFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCEB81D8-8B4A-4B1B-A8D2-9AE7C35FDBFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCEB81D8-8B4A-4B1B-A8D2-9AE7C35FDBFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCEB81D8-8B4A-4B1B-A8D2-9AE7C35FDBFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCEB81D8-8B4A-4B1B-A8D2-9AE7C35FDBFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A399009B-B31F-4671-B190-DEEC631E1674}
+	EndGlobalSection
+EndGlobal
