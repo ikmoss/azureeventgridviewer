@@ -46,7 +46,7 @@ class JsonDataSection extends React.Component {
                         <Grid item xs={this.state.isSplit? 6:12} key={`jsondata${item.id}`}>
                         <Paper>
                         <AzEventCard topic={item.topic} type={item.eventType} subject={item.subject} id={item.id} removeSelection={this.props.removeSelection}/>
-                        <ReactJson src={item.data} collapsed={2} />
+                        <ReactJson src={item.data} collapsed={2}  />
                         </Paper>
                         </Grid>
                     );

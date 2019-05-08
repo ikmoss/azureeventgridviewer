@@ -258,7 +258,7 @@ class EnhancedTable extends React.Component {
             const topicTrimmed = topic.substr(topic.lastIndexOf('/') + 1);
             const jsonObj = JSON.parse(jsonData);
             const dataItem = createData(id, eventType, subject, jsonObj, topicTrimmed, eventTime);
-            const data = [dataItem, ...this.state.data];
+            const data = [...this.state.data, dataItem ];
             this.setState({ data });
         });
     });
@@ -403,7 +403,7 @@ class EnhancedTable extends React.Component {
             />
             <TableBody>
               {stableSort(data, getSorting(order, orderBy))
-                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                //.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                 .map(n => {
                   const isSelected = this.isSelected(n.id);
                   const {typeFilter, subjectFilter, topicFilter} = this.state.filters;
@@ -443,7 +443,7 @@ class EnhancedTable extends React.Component {
             </TableBody>
           </Table>
         </div>
-        <TablePagination
+        {/* <TablePagination
           rowsPerPageOptions={[15, 30, 100, 200]}
           component="div"
           count={data.length}
@@ -457,7 +457,7 @@ class EnhancedTable extends React.Component {
           }}
           onChangePage={this.handleChangePage}
           onChangeRowsPerPage={this.handleChangeRowsPerPage}
-        />
+        /> */}
       </Paper>
     );
   }
