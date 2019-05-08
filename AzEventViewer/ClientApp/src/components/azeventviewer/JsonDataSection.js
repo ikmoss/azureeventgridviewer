@@ -7,7 +7,6 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
 import AzEventCard from './AzEventCard';
 import OopsCard from './OopsCard';
-import { Container } from 'semantic-ui-react';
 
 class JsonDataSection extends React.Component {
     constructor(props) {
@@ -26,7 +25,7 @@ class JsonDataSection extends React.Component {
     render() {
         if (this.state.jsonDataList.length > 0) {
             return (
-                <Container>
+                <Paper>
                 <FormGroup>
                     <FormControlLabel 
                         control={
@@ -53,7 +52,7 @@ class JsonDataSection extends React.Component {
                     );
                 })}
                 </Grid>
-                </Container>
+                </Paper>
             );
         }
         else {
