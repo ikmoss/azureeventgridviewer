@@ -25,7 +25,7 @@ class JsonDataSection extends React.Component {
     render() {
         if (this.state.jsonDataList.length > 0) {
             return (
-                <Paper>
+                <div>
                 <FormGroup>
                     <FormControlLabel 
                         control={
@@ -52,7 +52,7 @@ class JsonDataSection extends React.Component {
                     );
                 })}
                 </Grid>
-                </Paper>
+                </div>
             );
         }
         else {

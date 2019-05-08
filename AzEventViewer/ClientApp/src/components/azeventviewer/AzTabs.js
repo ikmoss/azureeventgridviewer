@@ -201,7 +201,7 @@ class FullWidthTabs extends React.Component {
       <AppBar position="fixed">
           <Toolbar>
             <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-              Az EventGrid Viewer - Beta
+              Az EventGrid Viewer
             </Typography>
             <div className={classes.grow} />
 

@@ -184,8 +184,8 @@ let EnhancedTableToolbar = props => {
         ) : (
       <div className={classes.title}>
           
-          <Typography>
-            Event Grid Event LIst
+          <Typography variant="h6" >
+            Event Grid Event List
           </Typography>
           <IconButton onClick={clearData} >
            <DeleteIcon />
@@ -220,6 +220,9 @@ const styles = theme => ({
   tableWrapper: {
     overflowX: 'auto',
   },
+  pointer: {
+    cursor: 'pointer'
+  }
 });
 
 class EnhancedTable extends React.Component {
@@ -423,11 +426,11 @@ class EnhancedTable extends React.Component {
                       <TableCell padding="checkbox">
                         <Checkbox checked={isSelected} />
                       </TableCell>
-                      <TableCell onClick={this.onTopicClick} component="th" scope="row" padding="none">
+                      <TableCell className={classes.pointer} onClick={this.onTopicClick} component="th" scope="row" padding="none">
                         {n.topic}
                       </TableCell>
-                      <TableCell onClick={this.onEventTypeClick}>{n.eventType}</TableCell>
-                      <TableCell onClick={this.onSubjectClick}>{n.subject}</TableCell>
+                      <TableCell className={classes.pointer} onClick={this.onEventTypeClick}>{n.eventType}</TableCell>
+                      <TableCell className={classes.pointer} onClick={this.onSubjectClick}>{n.subject}</TableCell>
                       <TableCell>{n.time}</TableCell>
                     </TableRow>
                   );
