@@ -143,7 +143,10 @@ const toolbarStyles = theme => ({
     flexDirection:'row-reverse',
   },
   title: {
+    display: 'flex',
     flex: '0 0 auto',
+    alignItems:'center',
+    flexDirection:'row',
   },
 });
 
@@ -170,20 +173,25 @@ let EnhancedTableToolbar = props => {
         [classes.highlight]: numSelected > 0,
       })}
     >
-      <div className={classes.title}>
         {numSelected > 0 ? (
+      <div className={classes.title}>
+
           <Typography color="inherit" variant="subtitle1">
             {numSelected} selected
           </Typography>
-        ) : (
-          <Typography variant="h6" id="tableTitle">
-            Event Grid Event LIst
-            <IconButton onClick={clearData}>
-              <DeleteIcon />
-            </IconButton>
-          </Typography>
-        )} 
       </div>
+
+        ) : (
+      <div className={classes.title}>
+          
+          <Typography>
+            Event Grid Event LIst
+          </Typography>
+          <IconButton onClick={clearData} >
+           <DeleteIcon />
+         </IconButton>
+         </div>
+        )} 
      
       <div className={classes.filters}>
         {filters.subjectFilter ? <Chip  onDelete={onSubjectDelete} label={filters.subjectFilter} className={classes.chip}/>: ""}
@@ -354,7 +362,16 @@ class EnhancedTable extends React.Component {
   }
 
   clearData = () => {
-    this.setState({data:[], selected:[]});
+    this.setState({
+      data:[], 
+      selected:[], 
+      filters: 
+      {
+        topicFilter: null,
+        typeFilter: null,
+        subjectFilter: null
+      }
+    });
     this.props.selectedDataChanged([]);
   }
 
@@ -424,7 +441,7 @@ class EnhancedTable extends React.Component {
           </Table>
         </div>
         <TablePagination
-          rowsPerPageOptions={[10, 15, 30]}
+          rowsPerPageOptions={[15, 30, 100, 200]}
           component="div"
           count={data.length}
           rowsPerPage={rowsPerPage}
