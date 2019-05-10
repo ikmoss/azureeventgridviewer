@@ -1,9 +1,9 @@
 # Azure EventGrid Viewer
-Development and monitoring tools for viewing Azure EventGrid events.
+Azure Event Grid monitoring tool
 
-Steps
-1. Configure subscription for EventGrid endpoint
-2. Run the app
+You can learn more about this from here:
+[Azure Event Grid Viewer with ASP.Net Core 2.2 SignalR and React](https://ikmoss.wordpress.com/2019/05/10/azure-event-grid-viewer-with-asp-net-core-2-2-signalr-and-react/)
 
-
-Azure Event Grid Viewer
+## Steps
+1. Deploy the solution to Azure webapp
+2. Add the new app to EventGrid/EventDomain subscription
